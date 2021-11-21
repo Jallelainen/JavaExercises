@@ -16,10 +16,10 @@ public class App {
                 switch (choice) {
                     case 1:
                         Ex1(sc);
-                        userInput = HandleInput(sc);
                         break;
-                    
-    
+                    case 2:
+                        Ex2(sc);
+                        break;
                     case -1:
                         System.out.println("Thank you for your time. Goodbye.");
                         keepAlive = false;
@@ -30,17 +30,27 @@ public class App {
             } catch (Exception e) {
                 System.out.println("That is not a valid number.");
             }
-        } ;
+        };
     }
 
     public static void Ex1(Scanner sc){
         System.out.println("Please enter a number.");
         int x = Integer.parseInt(sc.nextLine());
 
-        System.out.println("Please enter another number.");
+        System.out.println("Please enter the number you want to add.");
         int y = Integer.parseInt(sc.nextLine());
 
         System.out.println("The sum of your numbers are: " + (x + y));
+    }
+
+    public static void Ex2(Scanner sc){
+        System.out.println("Please enter a number.");
+        int x = Integer.parseInt(sc.nextLine());
+
+        System.out.println("Please enter the number you want to divide with.");
+        int y = Integer.parseInt(sc.nextLine());
+
+        System.out.println("The division between your numbers are: " + (x / y));
     }
 
     public static String HandleInput(Scanner sc) {
