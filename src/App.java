@@ -5,25 +5,32 @@ public class App {
         boolean keepAlive = true;
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Welcome! I am the Java Task Master 3000. Please enter the number of the exercise you want to run. (Enter -1 to exit)");
-        String userInput = HandleInput(sc);
+        System.out.println("Welcome! I am the Java Task Master 3000.");
+        
+        while (keepAlive) {
+            try {
+                System.out.println("Please enter the number of the exercise you want to run. (Enter -1 to exit)");
+                String userInput = HandleInput(sc);
+                int choice = Integer.parseInt(userInput);
 
-        do {
-            switch (userInput) {
-                case "1":
-                    Ex1(sc);
-                    userInput = HandleInput(sc);
-                    break;
-                
-
-                case "-1":
-                    System.out.println("Thank you for this time. Goodbye.");
-                    keepAlive = false;
-                    break;
-                default:
-                    break;
+                switch (choice) {
+                    case 1:
+                        Ex1(sc);
+                        userInput = HandleInput(sc);
+                        break;
+                    
+    
+                    case -1:
+                        System.out.println("Thank you for your time. Goodbye.");
+                        keepAlive = false;
+                        break;
+                    default:
+                        break;
+                };
+            } catch (Exception e) {
+                System.out.println("That is not a valid number.");
             }
-        } while (keepAlive);
+        } ;
     }
 
     public static void Ex1(Scanner sc){
