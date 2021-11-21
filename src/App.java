@@ -10,8 +10,7 @@ public class App {
         while (keepAlive) {
             try {
                 System.out.println("Please enter the number of the exercise you want to run. (Enter -1 to exit)");
-                String userInput = HandleInput(sc);
-                int choice = Integer.parseInt(userInput);
+                int choice = sc.nextInt();
 
                 switch (choice) {
                     case 1:
@@ -22,6 +21,9 @@ public class App {
                         break;
                     case 3: 
                         Ex3(sc);
+                        break;
+                    case 4: 
+                        Ex4(sc);
                         break;
                     case -1:
                         System.out.println("Thank you for your time. Goodbye.");
@@ -67,11 +69,14 @@ public class App {
         System.out.println("Your equation is: " + x + "x" + y + "=" + (x * y));
     }
 
+    public static void Ex4(Scanner sc){
+        System.out.println("Please enter a number.");
+        int x = sc.nextInt();
+        System.out.println("The multiplication table for your number is as follows: ");
 
-    public static String HandleInput(Scanner sc) {
-        String userInput = sc.nextLine();
-
-        return userInput;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(x + "x" + i + "=" + (x * i));
+        }
     }
 
     
