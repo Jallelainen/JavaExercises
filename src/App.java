@@ -20,6 +20,9 @@ public class App {
                     case 2:
                         Ex2(sc);
                         break;
+                    case 3: 
+                        Ex3(sc);
+                        break;
                     case -1:
                         System.out.println("Thank you for your time. Goodbye.");
                         keepAlive = false;
@@ -52,6 +55,18 @@ public class App {
 
         System.out.println("The division between your numbers are: " + (x / y));
     }
+
+    public static void Ex3(Scanner sc){
+        System.out.println("Please enter a number.");
+        int x = Integer.parseInt(sc.nextLine());
+
+        System.out.println("Please enter the number you want to multiply with.");
+        int y = Integer.parseInt(sc.nextLine());
+
+        System.out.println("The product your numbers are: " + (x * y));
+        System.out.println("Your equation is: " + x + "x" + y + "=" + (x * y));
+    }
+
 
     public static String HandleInput(Scanner sc) {
         String userInput = sc.nextLine();
