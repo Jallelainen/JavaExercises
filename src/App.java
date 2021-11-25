@@ -40,30 +40,30 @@ public class App {
 
     public static void Ex1(Scanner sc){
         System.out.println("Please enter a number.");
-        int x = Integer.parseInt(sc.nextLine());
+        int x = sc.nextInt();
 
         System.out.println("Please enter the number you want to add.");
-        int y = Integer.parseInt(sc.nextLine());
+        int y = sc.nextInt();
 
         System.out.println("The sum of your numbers are: " + (x + y));
     }
 
     public static void Ex2(Scanner sc){
         System.out.println("Please enter a number.");
-        int x = Integer.parseInt(sc.nextLine());
+        int x = sc.nextInt();
 
         System.out.println("Please enter the number you want to divide with.");
-        int y = Integer.parseInt(sc.nextLine());
+        int y = sc.nextInt();
 
         System.out.println("The division between your numbers are: " + (x / y));
     }
 
     public static void Ex3(Scanner sc){
         System.out.println("Please enter a number.");
-        int x = Integer.parseInt(sc.nextLine());
+        int x = sc.nextInt();
 
         System.out.println("Please enter the number you want to multiply with.");
-        int y = Integer.parseInt(sc.nextLine());
+        int y = sc.nextInt();
 
         System.out.println("The product your numbers are: " + (x * y));
         System.out.println("Your equation is: " + x + "x" + y + "=" + (x * y));
