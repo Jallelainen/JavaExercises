@@ -110,7 +110,12 @@ public class App {
     }
     
     private static void Ex5(Scanner sc) {
-        System.out.println("Please enter your radius:");
+        System.out.println("Please enter your radius in cm:");
+        double r = sc.nextDouble();
+        double area = Math.PI * (r * r);
+        double circum = Math.PI * 2 * r;
+
+        System.out.println("The area of your circle is: " + area + ", and the circumference is: " + circum);
     }
     
 }
