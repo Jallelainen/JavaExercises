@@ -9,7 +9,8 @@ public class App {
             new Exercise(){{Name = "Division."; Desc = "Divide two numbers.";}}, 
             new Exercise(){{Name = "Multiplication."; Desc = "Multiply two numbers.";}}, 
             new Exercise(){{Name = "Table of Multiplication."; Desc = "Writes out the table of multiplication for any number.";}},
-            new Exercise(){{Name = "Circle Calculations."; Desc = "Calculates the area and perimeter of a circle based on its radius.";}} 
+            new Exercise(){{Name = "Circle Calculations."; Desc = "Calculates the area and perimeter of a circle based on its radius.";}},
+            new Exercise(){{Name = "Number Calculations."; Desc = "Takes 2 numbers and outputs different calculations based on those numbers.";}} 
         }; 
         
         System.out.println("  ");
@@ -41,6 +42,9 @@ public class App {
                     case 5: 
                         Ex5(sc);
                         break;
+                    case 6: 
+                        Ex6(sc);
+                        break;
                     case -1:
                         System.out.println("Thank you for your time. Goodbye.");
                         keepAlive = false;
@@ -55,6 +59,8 @@ public class App {
             }
         };
     }
+
+    
 
     public static void OutputOptions(Exercise[] exercises){
         System.out.println("  ");
@@ -118,4 +124,30 @@ public class App {
         System.out.println("The area of your circle is: " + area + ", and the circumference is: " + circum);
     }
     
+    private static void Ex6(Scanner sc) {
+        int lg;
+        int sm;
+
+        System.out.println("Please enter a number.");
+        int x = sc.nextInt();
+        System.out.println("Please enter another number.");
+        int y = sc.nextInt();
+
+        if (x > y) {
+            lg = x;
+            sm = y;
+        }else if(x == y){
+            System.out.println("You have entered the same number. They are equal.");
+            return;
+        }else{
+            lg = y;
+            sm = x;
+        }
+
+        System.out.println("The largest number is " + lg);
+        System.out.println("The smallest number is " + sm);
+        System.out.println(lg + " + " + sm + " = " + (lg + sm));
+        System.out.println(lg + " - " + sm + " = " + (lg - sm));
+        System.out.println(lg + " * " + sm + " = " + (lg * sm));
+    }
 }
